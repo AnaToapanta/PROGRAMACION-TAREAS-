@@ -1,10 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from tkcalendar import DateEntry  # Asegúrate de tener installada la librería tkcalendar
-
+from tkcalendar import DateEntry
 
 class AgendaApp:
-    def _init_(self, root):
+    def __init__(self, root):  # Corregido aquí
         self.root = root
         self.root.title("Agenda Personal")
 
@@ -78,8 +77,7 @@ class AgendaApp:
             for item in seleccion:
                 self.tree.delete(item)
 
-
-if _name_ == "_main_":
+if __name__ == "__main__":  # Corregido aquí
     root = tk.Tk()
     app = AgendaApp(root)
     root.mainloop()
